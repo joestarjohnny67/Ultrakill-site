@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultrakill Terminal</title>
+    <style>
+        /* Estilização Geral */
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Título e Ícone */
+        h1 {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #fff;
+            padding-bottom: 10px;
+        }
+
+        h1 img {
+            height: 60px; /* Ajuste o tamanho do ícone aqui */
+            filter: drop-shadow(0 0 5px #fff);
+        }
+
+        /* Container do Jogo */
+        .game-container {
+            width: 90vw;
+            height: 70vh;
+            max-width: 1000px;
+            border: 4px solid #fff;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+            background: #111;
+            position: relative;
+        }
+
+        /* Efeito de Scanline (opcional, para dar clima de terminal) */
+        .game-container::after {
+            content: " ";
+            position: absolute;
+            top: 0; left: 0; bottom: 0; right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
+                        linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            background-size: 100% 4px, 3px 100%;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 0.8rem;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>
+        <img src="image_6a2a3e.png" alt="V1 Icon">
+        ULTRAKILL
+    </h1>
+
+    <div class="game-container">
+        <iframe src='https://www.miniplay.com/embed/ultrakill' frameborder='0' allowfullscreen></iframe>
+    </div>
+
+    <footer>MANKIND IS DEAD. BLOOD IS FUEL. HELL IS FULL.</footer>
+
+</body>
+</html>
